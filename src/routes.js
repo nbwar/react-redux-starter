@@ -5,8 +5,8 @@ import Home                            from 'pages/Home'
 
 export default (
 
-  <Route component={App}>
-    <IndexRoute path="/" component={Home} />
+  <Route path="/" component={App}>
+    <IndexRoute component={Home} />
 
     <Redirect from="*" to="/" />
   </Route>
