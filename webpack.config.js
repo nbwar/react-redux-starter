@@ -33,9 +33,12 @@ module.exports = {
      {
         // https://github.com/jtangelder/sass-loader
         test: /\.scss$/,
-        loaders: ['style', 'css', 'sass'],
+        loaders: ['style', 'css', 'postcss', 'sass'],
      }
     ],
+  },
+  postcss: function () {
+    return [require('autoprefixer')];
   },
   devServer: {
     contentBase: __dirname + '/public',

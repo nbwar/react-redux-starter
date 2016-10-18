@@ -8,6 +8,6 @@ module.exports.entry = __dirname + '/' + module.exports.app_root + '/main.js';
 // export css to a separate file
 module.exports.module.loaders[1] = {
   test: /\.scss$/,
-  loader: ExtractTextPlugin.extract('css!sass'),
+  loader: ExtractTextPlugin.extract('css!postcss!sass'),
 };
 module.exports.plugins.push(new ExtractTextPlugin('../css/main.css'));
