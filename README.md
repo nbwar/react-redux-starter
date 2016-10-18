@@ -26,8 +26,13 @@ A simple react redux starter without the oppinionated addons. Webpack hot realoa
 1. `npm run build-dev` build files without `ENV=development` to public/
 
 \* `npm start` will compile assets in memory so you may see console warning for missing `main.css`
+\*\* Also you will need to remove `public/js` And `public/css` to go back to hot reloading
 
 # Deployment
 1. `npm run build-prod` build files without `ENV=production` to public/
 
 
+
+# TODO
+1. Production deplyoment steps
+2. Fix issue with after running `npm build-` and then npm start using both stylesheets
