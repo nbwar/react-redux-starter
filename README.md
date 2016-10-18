@@ -13,6 +13,7 @@ A simple react redux starter without the oppinionated addons. Webpack hot realoa
 + Webpack w/ Hot Reload
 + Babel
 + Sass
++ PostCSS
 + ESLint
 + ES6 & ES7
 
