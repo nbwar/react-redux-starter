@@ -10,4 +10,5 @@ module.exports.module.loaders[1] = {
   test: /\.scss$/,
   loader: ExtractTextPlugin.extract('css!postcss!sass'),
 };
+
 module.exports.plugins.push(new ExtractTextPlugin('../css/main.css'));

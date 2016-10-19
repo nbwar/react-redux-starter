@@ -2,6 +2,8 @@
 // http://webpack.github.io/docs/webpack-dev-server.html
 var app_root = 'src'; // the app root folder: src, src_users, etc
 var path = require('path');
+var CleanWebpackPlugin = require('clean-webpack-plugin');
+
 module.exports = {
   app_root: app_root, // the app root folder, needed by the other webpack configs
   entry: [
@@ -43,7 +45,13 @@ module.exports = {
   devServer: {
     contentBase: __dirname + '/public',
   },
-  plugins: [],
+  plugins: [
+    new CleanWebpackPlugin(['css', 'js'], {
+      root: __dirname + '/public',
+      verbose: true,
+      dry: false, // true for simulation
+    })
+  ],
   resolve: {
     root: path.resolve('src'),
   },
